@@ -1,0 +1,30 @@
+<apex:page showHeader="true" sidebar="true">
+    
+    <style>
+        
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .directions {
+            font-size: 20px;
+            line-height: 2;
+        }
+       
+        
+    </style>
+    
+    <apex:sectionHeader title="Add Generate PDF Document Component to Record Page of any object"/>
+    
+    <apex:pageBlock title="Directions" >
+        <p>Follow these steps to add the Generate PDF Document Component to a record page:</p>
+        <ol>
+            <li>Go to the record where you want to add the text extractor component.</li>
+            <li>Click on the gear icon located in the upper-right corner.</li>
+            <li>Choose "Edit Page" from the dropdown menu.</li>
+            <li>In the left panel, find the list of custom-managed components.</li>
+            <li>Add the component named "parseNPrint_pdfGenerator" component to the desired section of the page.</li>
+        </ol>
+    </apex:pageBlock>
+</apex:page>

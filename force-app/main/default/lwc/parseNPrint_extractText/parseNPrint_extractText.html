@@ -1,0 +1,36 @@
+<template>
+
+    <lightning-card>
+        <div class="logo-container slds-var-p-around_small" style="display: flex; justify-content: center; align-items: center;" >
+            <img src={logoUrl} alt="Company Logo"   width="150" height="120"  style="display: flex; justify-content: center; align-items: center;" >
+        </div>
+    
+    <lightning-card title="Text Extractor">
+        <div class="slds-p-around_small">
+        <lightning-input type="File" label="Insert Pdf File" accept=".pdf" onchange={handleonUpload}></lightning-input>
+    </div>
+       
+        
+        <!-- <div class="slds-p-around_small">        
+    <lightning-button label="Get Object Fields" onclick={getObjectFields}></lightning-button>
+</div> -->
+    
+    
+  
+<div class="slds-p-around_small">
+    <lightning-combobox
+        label="Select Field"
+        value={selectedField}
+        options={fieldOptions}
+        onchange={handleFieldChange}>
+    </lightning-combobox>
+</div>
+    
+<div class="slds-p-around_small">
+    <lightning-button label="Save PDF Content" onclick={handleButtonClick}></lightning-button>
+</div>
+
+</lightning-card>
+</lightning-card>
+
+</template>

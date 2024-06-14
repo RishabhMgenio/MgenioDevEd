@@ -1,0 +1,48 @@
+<template>
+    <lightning-card title="Real Time Weather">
+
+        <div class="slds-var-p-around_medium">
+            
+        <lightning-input type="text" label="Enter City Name" onchange={handleCityNameEvent}></lightning-input>
+    </div>
+
+    <div class="slds-var-p-around_medium">
+        <lightning-button label="Get Weather Details" variant="Brand" onclick={handleButtonClick}></lightning-button>
+    </div>
+
+    <!--Display Weather Details-->
+
+    <div class="c-container">
+
+           <lightning-layout horizontal-align="spread" multiple-rows></lightning-layout>
+                <lightning-layout-item padding="around-small" size="12">
+                    <span class="slds-text-title_bold"> City : {weatherDetails.city} </span>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="6">
+                    <span class="slds-text-title_bold"> Temperature : {weatherDetails.temperature} </span>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="6">
+                    <span class="slds-text-title_bold"> Humidty : {weatherDetails.humidity} </span>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="6">
+                    <span class="slds-text-title_bold"> Pressure : {weatherDetails.pressure} </span>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="6">
+                    <span class="slds-text-title_bold"> FeelsLike : {weatherDetails.feelsLike} </span>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="6">
+                    <span class="slds-text-title_bold"> Min Temperature : {weatherDetails.tempMin} </span>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="6">
+                    <span class="slds-text-title_bold"> Max Temperature : {weatherDetails.tempMax} </span>
+                </lightning-layout-item>
+                
+
+    </div>
+
+
+
+    </lightning-card>
+
+
+</template>

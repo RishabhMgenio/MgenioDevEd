@@ -1,0 +1,48 @@
+<template>
+    <!-- <div class="slds-var-p-around_small"> -->
+      
+      
+       
+    <lightning-card>
+       
+        <div class="logo-container slds-var-p-around_small" style="display: flex; justify-content: center; align-items: center;" >
+            <img src={logoUrl} alt="Company Logo"   width="150" height="120"  style="display: flex; justify-content: left; align-items: left;" >
+        </div>
+
+        <lightning-card title="Generate PDF">
+
+            <div class="slds-var-p-around_small">
+            <lightning-button label={buttonLabel} onclick={toggleFieldList}></lightning-button>
+        </div>
+            <br/>
+            
+            <template if:true={showFieldList}>
+            <div class="slds-card" >
+                
+                <lightning-checkbox-group class="slds-var-m-left_large"
+                    name="SelectedFields"
+                    label="Select Fields" 
+                    options={fieldList}
+                    value= {fieldList}
+                    onchange={handleCheckboxChange}
+                ></lightning-checkbox-group>
+            </div>
+        </template>
+            <br/>
+
+                   
+    
+                <div class="slds-var-p-around_small">
+                   <lightning-button label="Generate Pdf" onclick={getData}></lightning-button>
+                </div>
+        </lightning-card>
+    </lightning-card>
+
+
+    <!-- </div> -->
+                       
+    
+           
+       
+   
+</template>

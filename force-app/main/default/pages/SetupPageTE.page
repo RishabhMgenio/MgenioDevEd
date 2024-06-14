@@ -1,0 +1,176 @@
+<apex:page controller="UploadPdfController" >
+    <html>
+        <head>
+            <title>
+                <strong>WELCOME TO PARSENPRINT</strong>
+                
+                    </title>
+            	<style>
+                    h1{
+            			text-align: center;
+                    text-align: center; 
+                   	    font-family: 'Calibri', sans-serif;
+                    	font-size: 38px;
+                   		 color: White;
+                      }
+                    
+                    html, body {
+                    text-align: center;
+                   background-image: url("{!URLFOR($Resource.backgrndimage)}"); 
+
+                    <!-- box-sizing: border-box; /* Include padding and border in total width/height */ -->
+                    
+                    
+           
+            	</style>
+        </head>
+      	<body>
+            
+          <!--  <h1>Welcome to ParseNPrint!</h1>
+	            <p style="color: #FF7032; font-size: 18px;">ParseNPrint allows you to parse and generate Pdf documents and deliver robust, sophisticated documents with ease. 
+            	</p> -->
+            
+            
+            
+             <div class="custom-box1"> 
+                
+            		<p>
+                        
+                        <strong>  Extract Text From PDF </strong>
+                        <apex:form style="position: relative;">
+    <apex:commandButton value="Import PDF" action="{!navigateToTab}"
+                        style="background-color: #f4511e; border: 1px solid rgba(27, 31, 35, .15); border-radius: 6px; box-shadow: #f4511e 0 1px 0; box-sizing: border-box; color: #f4511e; cursor: pointer; font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; font-size: 14px; font-weight: 600; line-height: 10px; padding: 6px 16px; position: relative; text-align: center; text-decoration: none; user-select: none; -webkit-user-select: none; touch-action: manipulation; vertical-align: middle; white-space: nowrap; z-index: 1;"/>
+</apex:form>
+                        
+                 </p>
+            </div>
+            <br/>
+        		  <br/>
+            
+            <div class="custom-box2">
+            <p>
+                        
+                <strong>  Add PDF Text Extractor Component </strong>
+                
+
+                <apex:form >
+                    <apex:commandButton value="See Directions" action="{!navigateToFunctionalityTwo}" style="background-color: #f4511e; border: 1px solid rgba(27, 31, 35, .15); border-radius: 6px; box-shadow: #f4511e 0 1px 0; box-sizing: border-box; color: #f4511e; cursor: pointer; font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; font-size: 14px; font-weight: 600; line-height: 10px; padding: 6px 16px; position: relative; text-align: center; text-decoration: none; user-select: none; -webkit-user-select: none; touch-action: manipulation; vertical-align: middle; white-space: nowrap; z-index: 1;"/>
+                </apex:form>
+                
+                        
+                 </p></div>
+            
+              <br/>
+              <br/> 
+            <div class="custom-box3">
+            <p>
+                        
+                
+                <strong>  Add PDF Generator Component </strong>
+                
+                <apex:form >
+                    <apex:commandButton value="See Directions" action="{!navigateToFunctionalityFour}" style="background-color: #f4511e; border: 1px solid rgba(27, 31, 35, .15); border-radius: 6px; box-shadow: #f4511e 0 1px 0; box-sizing: border-box; color: #f4511e; cursor: pointer; font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; font-size: 14px; font-weight: 600; line-height: 10px; padding: 6px 16px; position: relative; text-align: center; text-decoration: none; user-select: none; -webkit-user-select: none; touch-action: manipulation; vertical-align: middle; white-space: nowrap; z-index: 1;"/>
+                </apex:form>
+                        
+                 </p></div>
+            <br/>
+              <br/> 
+            <div class="custom-box4">
+            <p>
+                        
+                <strong>  Export Record As PDF </strong>
+                <apex:form >
+                    <apex:commandButton value="Export Record" action="{!navigateToFunctionalityThree}" style="background-color: #f4511e; border: 1px solid rgba(27, 31, 35, .15); border-radius: 6px; box-shadow: #f4511e 0 1px 0; box-sizing: border-box; color: #f4511e; cursor: pointer; font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; font-size: 14px; font-weight: 600; line-height: 10px; padding: 6px 16px; position: relative; text-align: center; text-decoration: none; user-select: none; -webkit-user-select: none; touch-action: manipulation; vertical-align: middle; white-space: nowrap; z-index: 1;"/>
+                </apex:form>
+                
+                        
+                 </p></div>
+            
+            
+            
+            <style>
+                
+                
+            	html, body{
+                font-family: 'Helvetica', sans-serif;
+                
+                font-size: 15px;
+               <!--  background-image: url('https://elements.cloud/app/uploads/2022/11/book-background.png');-->
+               <!-- background-size: fill; -->
+                 background-image: url("{!URLFOR($Resource.backgrndimage)}");   /* Replace with the path to your image */
+                    background-size: cover; /* Adjust the background size as needed */	
+                    background-repeat: no-repeat; /* Prevent background image from repeating */
+                    background-attachment: fixed; /* Keep the background fixed while scrolling */
+                    margin: 0; /* Remove default margin */
+                    padding: 0; /* Remove default padding */
+                    height: 100vh; /* Make sure the body covers the entire viewport height */
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    
+                }
+                
+                .custom-box1 {
+                    width: 400px;
+                    height: 80px;
+                  <!--  background-color: orange; /* Set the background color as needed */ -->
+                	border: 2px solid; 
+                <!--  border-color: #FF7032; -->
+                 background-color: rgba(255, 255, 255, 0.8);
+                color: Black;
+                  <!--	transform: translate(150%); -->
+                transform: translate(60%, 130px);
+               <!-- background-image: url('https://ddgobkiprc33d.cloudfront.net/c6bb2a54-c9bd-4f94-a516-c2f8c5761422.jpg'); -->/* Replace with the path to your image */
+                    background-size: cover; /* Adjust the background size as needed */
+                border-radius: 10px;
+                }
+                .custom-box2 {
+                    width: 400px;
+                    height: 80px;
+                   <!-- background-image: url('https://ddgobkiprc33d.cloudfront.net/c6bb2a54-c9bd-4f94-a516-c2f8c5761422.jpg');--> /* Replace with the path to your image */
+                    background-size: cover; /* Adjust the background size as needed */
+                	border: 2px solid; 
+                 background-color: rgba(255, 255, 255, 0.8);
+               <!-- border-color: #FF7032; -->
+                color: Black;
+                  	transform: translate(200%, 10px);
+                border-radius: 10px;
+                }
+                .custom-box3 {
+                    width: 400px;
+                    height: 80px;
+               
+                background-size: cover; /* Adjust the background size as needed */
+                	border: 2px solid; 
+                background-color: rgba(255, 255, 255, 0.8);
+               <!-- border-color: #FF7032;-->
+                color: Black;
+                  <!--	transform: translateX(220%);-->
+                transform: translate(200%, -10px);
+                	border-radius: 10px;
+                }
+                .custom-box4 {
+                    width: 400px;
+                    height: 80px;
+       
+                background-size: cover; /* Adjust the background size as needed */
+                	border: 2px solid; 
+                <!-- border-color: #FF7032;-->
+                 background-color: rgba(255, 255, 255, 0.8);
+                color: Black;
+                  <!--	transform: translateX(50%); -->
+                transform: translate(60%, -126px);
+               
+                	border-radius: 10px;
+                }
+                
+              
+                
+    
+                
+            </style>
+            
+                
+        </body>
+    </html>
+</apex:page>

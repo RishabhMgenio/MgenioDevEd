@@ -1,0 +1,63 @@
+<template>
+    <div class="slds-var-p-around_small">
+    <lightning-card title="Generate PDF">
+       
+            <div class="slds-theme_shade">
+                <div class="slds-var-p-around_small">
+                    <div class="slds-col">
+                        <lightning-combobox 
+                        name="objectType"
+                        onchange={onObjectTypeChange}
+                        options={objectTypeList}
+                        placeholder="Object Type">
+                      
+                    </lightning-combobox>
+                    </div>    
+                    <div class="slds-col">
+                        <lightning-combobox
+                        name="objectList"
+                        onchange={onObjectChange}
+                        value={objectApiName}
+                        options={objectList}    
+                        placeholder="Select Object">
+                       
+                    </lightning-combobox>
+                    </div>    
+                </div>
+            </div>
+        
+            <br/>
+            <br/>
+         
+         
+        
+           
+            <div class="slds-card" >
+                
+                <lightning-checkbox-group class="slds-var-m-left_large"
+                    name="SelectedFields"
+                    label="Selected Fields" 
+                    options={fieldList}
+                    value= {fieldList}
+                   onchange={handleCheckboxChange}
+                    ></lightning-checkbox-group>
+            </div>
+
+            <br/>
+
+                    <div class="slds-var-p-around_small">
+                   <lightning-input type="text" label="Record ID" value={recordId} onchange={handleRecordIdChange}></lightning-input>
+                </div>
+                   <br/>
+    
+                <div class="slds-var-p-around_small">
+                   <lightning-button label="Generate PDF" onclick={getData}></lightning-button>
+                </div>
+        </lightning-card>
+    
+    </div>
+                       
+           
+       
+   
+</template>
